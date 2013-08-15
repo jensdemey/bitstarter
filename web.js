@@ -3,8 +3,8 @@ var app = express();
 app.use(express.logger());
 
 var buf;
-//buf.write("Hello","utf-8");
-buf = fs.readFileSync('index.html','utf-8');
+buf.write("Hello","utf-8");
+//buf = fs.readFileSync('index.html','utf-8');
 app.get('/', function(request, response) {
   response.send(buf.toString('utf-8'));
 });
