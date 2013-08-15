@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 app.use(express.logger());
 
-buf = new Buffer();
+var buf = new Buffer();
 buf = fs.readFileSync(index.html);
 app.get('/', function(request, response) {
   response.send("Hi2");
